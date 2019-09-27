@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-gray-900;
+}
+
+footer {
+  @apply mt-16;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+
+.header {
+  @apply flex items-center mb-16 p-3 text-gray-700;
+}
+
+.header__link {
+  @apply mx-2 text-gray-600;
+}
+
+.header__link:hover {
+  @apply text-gray-700;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
