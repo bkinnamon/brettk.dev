@@ -1,9 +1,11 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply text-gray-900;
+  @apply font-sans text-gray-900;
 }
 
 footer {
@@ -14,6 +16,21 @@ h1 {
   @apply text-2xl;
 }
 
+h2 {
+  @apply my-6 text-xl text-center;
+}
+
+h3 {
+  @apply font-serif text-4xl;
+}
+
+.card {
+  @apply border border-gray-500 rounded px-5 py-3;
+}
+
+.card:hover {
+  @apply bg-gray-100;
+}
 
 .header {
   @apply flex items-center mb-16 p-3 text-gray-700;

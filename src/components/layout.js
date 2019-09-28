@@ -10,21 +10,26 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          social {
+            github
+            twitter
+          }
         }
       }
     }
   `)
 
+  console.log(data)
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div class="container mx-auto">
+      <Header
+        title={data.site.siteMetadata.title}
+        social={data.site.siteMetadata.social}
+      />
+      <div className="container mx-auto">
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <footer>&copy; 2019 Brett Kinnamon</footer>
       </div>
     </>
   )
