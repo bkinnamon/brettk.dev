@@ -15,6 +15,7 @@ export const query = graphql`
           frontmatter {
             title
             link
+            icon
           }
           excerpt
         }
@@ -29,12 +30,15 @@ const Projects = ({ data }) => {
       <SEO title="Projects" />
       <h2>Projects</h2>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <a href={node.frontmatter.link} key={node.id}>
-          <div className="card">
-            <h3>{node.frontmatter.title}</h3>
+        <div className="card" key={node.id}>
+          <a href={node.frontmatter.link}>
+            <h3>
+              <i className={`mr-3 fas fa-${node.frontmatter.icon}`}></i>
+              {node.frontmatter.title}
+            </h3>
+          </a>
             <p>{node.excerpt}</p>
-          </div>
-        </a>
+        </div>
       ))}
     </Layout>
   )

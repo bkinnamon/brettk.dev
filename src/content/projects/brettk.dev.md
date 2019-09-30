@@ -2,6 +2,12 @@
 title: brettk.dev
 category: projects
 link: https://brettk.dev/
+icon: project-diagram
 ---
 
-My personal website
+My personal website.
+
+## Built Using
+
+- [GatsbyJS](https://gatsbyjs.org)
+- My next project
