@@ -7,7 +7,6 @@ icon: project-diagram
 
 My personal website.
 
-## Built Using
+### Built Using
 
-- [GatsbyJS](https://gatsbyjs.org)
-- My next project
+* [GatsbyJS](https://gatsbyjs.org)
