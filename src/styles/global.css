@@ -9,27 +9,31 @@ body {
 }
 
 footer {
-  @apply mt-16;
+  @apply mt-16 text-gray-700;
 }
 
 h1 {
-  @apply text-2xl;
-}
-
-h2 {
   @apply my-6 text-xl text-center;
 }
 
-h3 {
+h2 {
   @apply font-serif text-4xl;
 }
 
-ul {
-  @apply list-disc;
+h3 {
+  @apply font-bold;
 }
 
-footer {
-  @apply text-gray-700;
+p {
+  @apply mb-6;
+}
+
+ul {
+  @apply list-disc ml-6;
+}
+
+.brand {
+  @apply text-2xl;
 }
 
 .card {

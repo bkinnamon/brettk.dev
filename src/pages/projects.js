@@ -17,7 +17,7 @@ export const query = graphql`
             link
             icon
           }
-          excerpt
+          html
         }
       }
     }
@@ -28,16 +28,16 @@ const Projects = ({ data }) => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div className="card" key={node.id}>
           <a href={node.frontmatter.link}>
-            <h3>
+            <h2>
               <i className={`mr-3 fas fa-${node.frontmatter.icon}`}></i>
               {node.frontmatter.title}
-            </h3>
+            </h2>
           </a>
-            <p>{node.excerpt}</p>
+          <div dangerouslySetInnerHTML={{ __html: node.html }}></div>
         </div>
       ))}
     </Layout>
