@@ -28,6 +28,10 @@ p {
   @apply mb-6;
 }
 
+small {
+  @apply block text-center;
+}
+
 ul {
   @apply list-disc ml-6;
 }
