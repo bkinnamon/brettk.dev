@@ -28,7 +28,9 @@ const Projects = ({ data }) => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <h1>Projects</h1>
+      <section className="my-6">
+        <h1>Projects</h1>
+      </section>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div className="card" key={node.id}>
           <a href={node.frontmatter.link}>
