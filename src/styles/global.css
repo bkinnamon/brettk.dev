@@ -13,7 +13,7 @@ footer {
 }
 
 h1 {
-  @apply my-6 text-xl text-center;
+  @apply text-xl text-center;
 }
 
 h2 {
@@ -56,3 +56,6 @@ ul {
   justify-self: end;
 }
 
+.subtitle {
+  @apply text-center text-sm;
+}
