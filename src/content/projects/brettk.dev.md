@@ -9,4 +9,4 @@ My personal website.
 
 ### Built Using
 
-* [GatsbyJS](https://gatsbyjs.org)
+- [GatsbyJS](https://gatsbyjs.org)

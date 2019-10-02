@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,10 +7,15 @@ import SEO from "../components/seo"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query PostsQuery {
-      allMarkdownRemark(filter: {frontmatter: {category: {eq: "posts"}}}) {
+      allMarkdownRemark(
+        filter: { frontmatter: { category: { eq: "posts" } } }
+      ) {
         edges {
           node {
             id
+            fields {
+              slug
+            }
             frontmatter {
               title
             }
@@ -29,9 +34,11 @@ const IndexPage = () => {
         <p className="subtitle">Web developer</p>
       </section>
 
-      {data.allMarkdownRemark.edges.map(({node}) => (
+      {data.allMarkdownRemark.edges.map(({ node }) => (
         <article key={node.id}>
-          <h2>{node.frontmatter.title}</h2>
+          <Link to={node.fields.slug} className="hover:text-gray-500">
+            <h2>{node.frontmatter.title}</h2>
+          </Link>
           <p>{node.excerpt}</p>
         </article>
       ))}
