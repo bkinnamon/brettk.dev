@@ -36,6 +36,10 @@ ul {
   @apply list-disc ml-6;
 }
 
+.article__body {
+  @apply max-w-md mx-auto;
+}
+
 .brand {
   @apply text-2xl;
 }
