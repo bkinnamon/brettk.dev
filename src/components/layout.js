@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
         title={data.site.siteMetadata.title}
         social={data.site.siteMetadata.social}
       />
-      <div className="container mx-auto">
+      <div className="container mx-auto px-8">
         <main>{children}</main>
         <footer>&copy; 2019 Brett Kinnamon</footer>
       </div>

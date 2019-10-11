@@ -1,11 +1,21 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+a {
+  @apply text-gray-600;
+  transition: color 200ms;
+}
+
+a:hover {
+  @apply text-gray-700;
+}
+
 body {
   @apply font-sans text-gray-900;
+  min-width: 320px;
 }
 
 footer {
@@ -13,7 +23,7 @@ footer {
 }
 
 h1 {
-  @apply text-xl text-center;
+  @apply text-6xl text-center;
 }
 
 h2 {
@@ -45,11 +55,15 @@ ul {
 }
 
 .card {
-  @apply border border-gray-500 rounded px-5 py-3;
+  @apply py-6;
 }
 
 .header {
   @apply flex items-center mb-16 p-3 text-gray-700;
+}
+
+.header__title {
+  @apply text-xl m-0;
 }
 
 .header__link {

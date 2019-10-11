@@ -33,7 +33,11 @@ const Projects = ({ data }) => {
       </section>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div className="card" key={node.id}>
-          <a href={node.frontmatter.link}>
+          <a
+            href={node.frontmatter.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <h2>
               <i className={`mr-3 fas fa-${node.frontmatter.icon}`}></i>
               {node.frontmatter.title}

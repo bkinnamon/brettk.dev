@@ -5,7 +5,7 @@ import React from "react"
 const Header = ({ title, social }) => (
   <header className="header">
     <div className="mx-3">
-      <h1 className="m-0">
+      <h1 className="header__title">
         <Link to="/">{title}</Link>
       </h1>
     </div>
@@ -19,10 +19,22 @@ const Header = ({ title, social }) => (
     </nav>
     <div className="flex-1"></div>
     <div className="mx-3">
-      <a href={`https://github.com/${social.github}`} className="mx-3">
+      <a
+        href={`https://github.com/${social.github}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Github"
+        className="mx-3"
+      >
         <i className="fab fa-lg fa-github"></i>
       </a>
-      <a href={`https://twitter.com/${social.twitter}`} className="mx-3">
+      <a
+        href={`https://twitter.com/${social.twitter}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter"
+        className="mx-3"
+      >
         <i className="fab fa-lg fa-twitter"></i>
       </a>
     </div>
