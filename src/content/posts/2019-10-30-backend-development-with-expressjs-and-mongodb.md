@@ -53,7 +53,10 @@ The last step is setting up the development environment is to configure a `packa
 }
 ```
 
+#### MongoDB
+
+One last thing to setup is MongoDB. It's not too difficult to get a [local MongoDB instance running using docker](https://hub.docker.com/_/mongo). Also, you can use [Atlas](https://www.mongodb.com/cloud/atlas), a cloud service from MongoDB.
+
 ### Meat and Potatoes
 
 The previous bit could be summed up with a script and run automatically. The only tricky part would be inserting the `script` into `package.json`. From here on out we'll be coding.
-
