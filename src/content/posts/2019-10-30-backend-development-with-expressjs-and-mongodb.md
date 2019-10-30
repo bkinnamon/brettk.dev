@@ -1,6 +1,6 @@
 ---
 category: posts
-title: Backend Development with ExpressJS and MongoDB
+title: 'Backend: Part 1'
 date: 2019-10-30T16:12:14.827Z
 ---
 I never really liked backend development. It always felt like a HUGE paradigm shift that I wasn't able to make. Now that I've built a client side router and view system from scratch for a project at work, I'm here tell you that it's really not that bad.
@@ -57,6 +57,6 @@ The last step is setting up the development environment is to configure a `packa
 
 One last thing to setup is MongoDB. It's not too difficult to get a [local MongoDB instance running using docker](https://hub.docker.com/_/mongo). Also, you can use [Atlas](https://www.mongodb.com/cloud/atlas), a cloud service from MongoDB.
 
-### Meat and Potatoes
+### Setup Complete
 
-The previous bit could be summed up with a script and run automatically. The only tricky part would be inserting the `script` into `package.json`. From here on out we'll be coding.
+Now that setup is complete, we can start coding... in part 2.
