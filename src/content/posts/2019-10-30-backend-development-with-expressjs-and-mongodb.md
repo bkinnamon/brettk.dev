@@ -3,7 +3,7 @@ category: posts
 title: 'Backend: Part 1'
 date: 2019-10-30T16:12:14.827Z
 ---
-I never really liked backend development. It always felt like a HUGE paradigm shift that I wasn't able to make. Now that I've built a client side router and view system from scratch for a project at work, I'm here tell you that it's really not that bad.
+I've never enjoyed backend development. It always felt like a HUGE paradigm shift that I wasn't able to make. I've spent the past week working on an app with ExpressJS and MongoDB. I'm happy to say that I've enjoyed it this time around.
 
 <!-- end -->
 
@@ -24,7 +24,10 @@ curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o
 
 #### NodeJS
 
-Next I'll get the `npm` project initialized and install my dependancies. `express` allows us to quickly spin up a web server. `mongoose` provides us an object relational mapping framework to easily integrate with a MongoDB database. We'll use `nodemon` (definitely not pronounced no demon, but I can't see it any other way) to automatically reload the development server when a change is made.
+Next I'll get the `npm` project initialized and install my dependancies.
+* `express` allows us to spin up a web server.
+* `mongoose` provides an object relational mapping (ORM) framework that integrates with MongoDB.
+* `nodemon` will reload the development server when we make a change to our code.
 
 ```bash
 npm init -y
@@ -43,13 +46,13 @@ touch src/main.js
 
 #### Package.json
 
-The last step is setting up the development environment is to configure a `package.json` script. The filename, `src/main.js`, is where our app will start. You can organize your files however you want.
+The last step is to configure a `package.json` `script`. The filename, `src/main.js`, is where our app will start. You can organize your files how you want.
 
 ```json
 {
-  "script": {
-    "dev": "nodemon src/main.js"
-  }
+ "script": {
+   "dev": "nodemon src/main.js"
+ }
 }
 ```
 
