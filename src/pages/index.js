@@ -8,7 +8,8 @@ const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query PostsQuery {
       allMarkdownRemark(
-        filter: { frontmatter: { category: { eq: "posts" } } }
+        filter: { frontmatter: { category: { eq: "posts" } } },
+        sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
           node {
@@ -17,6 +18,7 @@ const IndexPage = () => {
               slug
             }
             frontmatter {
+              date
               title
             }
             excerpt
