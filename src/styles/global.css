@@ -38,6 +38,10 @@ p {
   @apply mb-6;
 }
 
+pre {
+  @apply my-6;
+}
+
 small {
   @apply block text-center;
 }
