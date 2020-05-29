@@ -14,7 +14,10 @@ const Header = ({ title, social }) => (
         Home
       </Link>
       <Link className="header__link" to="/projects">
-        Projects
+        Websites
+      </Link>
+      <Link className="header__link" to="/games">
+        Games
       </Link>
     </nav>
     <div className="flex-1"></div>

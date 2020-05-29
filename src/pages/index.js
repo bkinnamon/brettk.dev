@@ -8,7 +8,7 @@ const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query PostsQuery {
       allMarkdownRemark(
-        filter: { frontmatter: { category: { eq: "posts" } } },
+        filter: { frontmatter: { category: { eq: "posts" } } }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
@@ -25,6 +25,11 @@ const IndexPage = () => {
           }
         }
       }
+      site {
+        siteMetadata {
+          author
+        }
+      }
     }
   `)
 
@@ -32,8 +37,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <section className="my-6">
-        <h1>Brett Kinnamon</h1>
-        <p className="subtitle">Web developer</p>
+        <h1>{data.site.siteMetadata.author}</h1>
       </section>
 
       {data.allMarkdownRemark.edges.map(({ node }) => (

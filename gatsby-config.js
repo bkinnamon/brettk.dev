@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `brettk.dev`,
-    description: `Web developer`,
+    description: `Developer`,
     author: `Brett Kinnamon`,
     social: {
       github: `bkinnamon`,
@@ -43,12 +43,14 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
-          resolve: `gatsby-remark-vscode`,
-          options: {}
-        }]
-      }
-    }
+        plugins: [
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {},
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

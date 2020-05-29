@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       />
       <div className="container mx-auto px-8">
         <main>{children}</main>
-        <footer>&copy; 2019 Brett Kinnamon</footer>
+        <footer>&copy; 2020 Brett Kinnamon</footer>
       </div>
     </>
   )
