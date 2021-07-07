@@ -11,7 +11,7 @@ I've never enjoyed backend development. It always felt like a HUGE paradigm shif
 
 The first step that I take to setting up a project is building the initial structure.
 
-#### Project Folder and Git
+### Project Folder and Git
 
 To kick it off I'll setup the project folder and initialize git. I use a standard `.gitignore` file from github.
 
@@ -22,20 +22,21 @@ git init
 curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore
 ```
 
-#### NodeJS
+### NodeJS
 
 Next I'll get the `npm` project initialized and install my dependancies.
 * `express` allows us to spin up a web server.
 * `mongoose` provides an object relational mapping (ORM) framework that integrates with MongoDB.
+* `dotenv` allows us to keep our passwords private.
 * `nodemon` will reload the development server when we make a change to our code.
 
 ```bash
 npm init -y
-npm i express mongoose
+npm i express mongoose dotenv
 npm i -D nodemon
 ```
 
-#### Main
+### Main
 
 Now I'll setup the web apps entry point, `src/main.js`.
 
@@ -44,19 +45,19 @@ mkdir src
 touch src/main.js
 ```
 
-#### Package.json
+### Package.json
 
 The last step is to configure a `package.json` `script`. The filename, `src/main.js`, is where our app will start. You can organize your files how you want.
 
 ```json
 {
- "script": {
+ "scripts": {
    "dev": "nodemon src/main.js"
  }
 }
 ```
 
-#### MongoDB
+### MongoDB
 
 One last thing to setup is MongoDB. It's not too difficult to get a [local MongoDB instance running using docker](https://hub.docker.com/_/mongo). Also, you can use [Atlas](https://www.mongodb.com/cloud/atlas), a cloud service from MongoDB.
 
